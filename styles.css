@@ -3455,3 +3455,15 @@ transform:scale(1);
 opacity:1;
 }
 }
+
+@media (max-width:768px){
+
+#logros{
+display:none !important;
+height:0;
+overflow:hidden;
+padding:0;
+margin:0;
+}
+
+}
