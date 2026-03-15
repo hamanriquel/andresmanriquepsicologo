@@ -1657,10 +1657,6 @@ this.innerText = "Leer menos";
 
 });
 
-</script>
-
-
-<script>
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -1813,22 +1809,26 @@ updateCounter();
 
 </section>
 
+
+
 <script>
-    const items = document.querySelectorAll(".galeria-item");
 
-const observer = new IntersectionObserver(entries => {
+const items = document.querySelectorAll(".galeria-item");
 
-entries.forEach(entry => {
+const observer = new IntersectionObserver((entries) => {
 
-if(entry.isIntersecting){
-entry.target.classList.add("visible");
-}
+    entries.forEach((entry) => {
 
-});
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
 
-},{threshold:0.2});
+    });
 
-items.forEach(item => observer.observe(item));
+}, { threshold: 0.2 });
+
+items.forEach((item) => observer.observe(item));
+
 </script>
 
 
