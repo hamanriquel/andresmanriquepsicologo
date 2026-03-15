@@ -322,8 +322,8 @@ En Bogotá, una consulta privada suele oscilar entre $90.000 y $180.000 por sesi
     </div>
 
 
+ <div class="faq-section">
 
-  <div class="faq">
         <div class="faq-item">
             <button class="faq-question">
                ¿Cómo sé si este/a terapeuta es el/la adecuado/a para mí?
@@ -487,9 +487,6 @@ Estaré encantado de acompañar procesos formativos que generen impacto real en 
 
 
     </div>
-
-
-
 
 
 
@@ -808,9 +805,9 @@ Estaré encantado de acompañar procesos formativos que generen impacto real en 
 
     <!-- Línea de Tiempo -->
 
-<!-- ========================= -->
+<!-- ======================================================= -->
 <!-- LOGROS - TIMELINE -->
-<!-- ========================= -->
+<!-- ======================================================= -->
 
 <!-- 2024 -->
 <div class="timeline-item">
@@ -979,9 +976,9 @@ superior en Colombia. Se parte de una visión amplia, y contextualizada de las..
 </div>
 
 
-<!-- ========================= -->
+<!-- ======================================================= -->
 <!-- CARRUCEL DE NOTICIAS O MEDIOS DE TELEVICION-->
-<!-- ========================= -->
+<!-- ================================================================= -->
 
 
 
@@ -1475,5 +1472,14 @@ puntos.forEach(punto => {
 </footer>
 
 <script src="script.js"></script>
+<script>
+document.querySelectorAll(".faq-question").forEach(question => {
+  question.addEventListener("click", () => {
+    const item = question.parentElement;
+    item.classList.toggle("active");
+  });
+});
+</script>
+
 </body>
 </html>
