@@ -143,3 +143,14 @@ puntos.forEach(punto => {
 
 });
 </script>
+
+
+<script>
+document.querySelectorAll(".faq-question").forEach(question => {
+  question.addEventListener("click", () => {
+    const item = question.parentElement;
+    item.classList.toggle("active");
+  });
+});
+</script>
+
