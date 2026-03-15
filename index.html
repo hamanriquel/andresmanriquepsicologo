@@ -249,6 +249,42 @@ y bienestar real.
 
 </section>
 
+<script>
+
+const counters = document.querySelectorAll(".contador");
+
+counters.forEach(counter => {
+
+counter.innerText = "0";
+
+const updateCounter = () => {
+
+const target = +counter.getAttribute("data-target");
+
+const count = +counter.innerText;
+
+const increment = target / 100;
+
+if(count < target){
+
+counter.innerText = Math.ceil(count + increment);
+
+setTimeout(updateCounter,20);
+
+}else{
+
+counter.innerText = target;
+
+}
+
+};
+
+updateCounter();
+
+});
+
+</script>
+
 <!-- VALORESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
 
 <!-- VALORESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
@@ -843,12 +879,6 @@ encontré <span class="resaltado">dirección</span> y
 </section>
 
 
-
-
-
-
-
-
 <!--  MODELO APADRINAMIENTO -->
 <!--  MODELO APADRINAMIENTO -->
 <!--  MODELO APADRINAMIENTO -->
@@ -900,14 +930,15 @@ a que otros también puedan acceder a terapia.
 <div class="apadrina-icon">💛</div>
 
 <h3>Valores por sesión</h3>
-
-<ul class="tarifas-list">
+<p class="short-text">
 <li><strong>$50.000</strong> · Estrato 1 / SISBEN A–B3</li>
-<li><strong>$60.000</strong> · Estrato 2 / SISBEN B4</li>
-<li><strong>$80.000</strong> · Estrato 3</li>
-<li><strong>$100.000</strong> · Estrato 4</li>
-<li><strong>$140.000</strong> · Estratos 5–6</li>
-</ul>
+<li><strong>$60.000</strong> · Estrato 2 / SISBEN B4</li></p>
+<p class="hover-text">
+<strong>• $80.000</strong> · Estrato 3<br>
+<strong>• $100.000</strong> · Estrato 4<br>
+<strong>• $140.000</strong> · Estratos 5–6
+</p>
+
 
 </div>
 
@@ -981,50 +1012,70 @@ Quiero iniciar mi proceso
     </div>
 
     <div class="stats-section">
-        <div class="stat">
-            <h3>+8</h3>
-            <p>Años de experiencia</p>
-        </div>
-        <div class="stat">
-            <h3>1500+</h3>
-            <p>Estudiantes impactados</p>
-        </div>
-        <div class="stat">
-            <h3>Institucional</h3>
-            <p>Enfoque estratégico</p>
-        </div>
+
+    <div class="stat">
+        <h3><span class="counter" data-target="8">0</span>+</h3>
+        <p>Años de experiencia</p>
     </div>
+
+    <div class="stat">
+        <h3><span class="counter" data-target="2600">0</span>+</h3>
+        <p>Estudiantes impactados</p>
+    </div>
+
+    <div class="stat">
+        <h3>Institucional</h3>
+        <p>Enfoque estratégico</p>
+    </div>
+
+</div>
+
+
+
 
     <div class="programas-grid">
 
         <div class="programa-card">
             <h3>Orientación Vocacional Estratégica</h3>
-            <p>Diseño estructurado de decisiones académicas y proyecto de vida.</p>
+            <p>Taller experiencial diseñado para acompañar a los estudiantes en la toma de decisiones académicas y profesionales de manera informada y consciente. A través de metodologías participativas, herramientas de autoconocimiento y análisis del contexto educativo y laboral, los participantes fortalecen su proyecto de vida y clarifican sus intereses vocacionales. Este proceso ha sido desarrollado en más de 40 talleres con instituciones educativas, impactando a cientos de jóvenes en la construcción de decisiones académicas con mayor seguridad y propósito.</p>
         </div>
 
         <div class="programa-card">
             <h3>Entrenamiento Saber 11 - ICFES</h3>
-            <p>Preparación estratégica para pruebas con simulacros y técnicas de alto rendimiento.</p>
+            <p>Proceso de 5 sesiones para la preparación estratégica enfocado en fortalecer las competencias evaluadas en las pruebas Saber 11. A través de simulacros tipo examen, análisis de preguntas, técnicas de razonamiento y estrategias de alto rendimiento académico, los estudiantes desarrollan mayor seguridad, velocidad y precisión en la resolución de ítems. El proceso combina entrenamiento cognitivo, manejo del tiempo y orientación estratégica para maximizar el desempeño en pruebas estandarizadas.</p>
         </div>
 
         <div class="programa-card">
             <h3>Charlas Motivacionales Universitarias</h3>
-            <p>Activación mental y emocional para el ingreso a la educación superior.</p>
+            <p>Espacios de inspiración y activación personal diseñados para fortalecer la confianza, la mentalidad de logro y la motivación académica de los estudiantes frente a su ingreso a la educación superior. A través de experiencias reales, reflexión guiada y herramientas prácticas, los jóvenes descubren nuevas posibilidades para su futuro académico. Este es uno de los talleres más solicitados, con más de 120 conferencias realizadas en Bogotá y distintas ciudades de Colombia, impactando a miles de estudiantes en su proceso de toma de decisiones educativas.</p>
         </div>
 
         <div class="programa-card">
             <h3>Primeros Auxilios Psicológicos</h3>
-            <p>Capacitación en manejo inicial de crisis emocionales.</p>
+            <p>Programa formativo orientado a desarrollar habilidades básicas para la atención inicial de crisis emocionales en contextos educativos. 
+        A través de herramientas prácticas y simulaciones, los participantes aprenden a identificar señales de alerta, brindar contención 
+        emocional inmediata y activar rutas de apoyo institucional. El proceso se desarrolla en <strong>4 sesiones de 1 hora y 30 minutos</strong> 
+        cada una, facilitando un aprendizaje progresivo y aplicado.</p>
         </div>
 
         <div class="programa-card">
             <h3>Trayectorias de Vida</h3>
-            <p>Estructuración de metas académicas y profesionales.</p>
+            <p>Taller orientado a fortalecer la construcción del proyecto de vida en jóvenes, 
+        integrando metas académicas, profesionales y personales. A través de ejercicios 
+        de reflexión, autoconocimiento y planificación estratégica, los estudiantes 
+        identifican sus talentos, intereses y oportunidades, permitiéndoles trazar 
+        rutas claras hacia su futuro educativo y laboral.</p>
         </div>
 
         <div class="programa-card">
             <h3>Becas y Acceso a Educación Superior</h3>
-            <p>Ruta estratégica para oportunidades de Ingreso en Colombia.</p>
+           <p>
+        Taller orientado a visibilizar y aprovechar las múltiples oportunidades de acceso a la educación superior en Colombia. 
+        Actualmente existen más de 10 organizaciones, programas y estrategias que apoyan el ingreso y financiamiento de estudios 
+        universitarios y de formación posmedia. Sin embargo, cada mes miles de estudiantes pierden oportunidades de becas y apoyos 
+        económicos por falta de información o acompañamiento. Este espacio brinda herramientas prácticas para identificar convocatorias, 
+        comprender requisitos y diseñar una ruta estratégica de acceso a la educación superior.
+    </p>
         </div>
 
         <div class="programa-card">
@@ -1045,13 +1096,58 @@ Quiero iniciar mi proceso
     </div>
 
     <div class="cta-institucional">
-        <h3>Diseñemos un programa adaptado a tu institución</h3>
+        <h3>Diseñemos un programa adaptado a tu organización, empresa o institución educativa</h3>
 <a href="#contacto"    target="_blank" rel="noopener noreferrer"  > 
         <button >Solicitar propuesta</button>
 </a>
     </div>
 
-<!------------------------ GALERÍA DE EXPERIENCIA GALERÍA DE EXPERIENCIA -------------------->
+</section>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+const target = +counter.getAttribute("data-target");
+
+let count = 0;
+
+const increment = target / 100;
+
+function updateCounter(){
+
+count += increment;
+
+if(count < target){
+
+counter.innerText = Math.floor(count);
+
+requestAnimationFrame(updateCounter);
+
+}else{
+
+counter.innerText = target;
+
+}
+
+}
+
+updateCounter();
+
+});
+
+});
+
+</script>
+
+
+
+<!------------------------ GALERÍA TALLERES DE EXPERIENCIA GALERÍA DE EXPERIENCIA -------------------->
 <!------------------------ GALERÍA TALLERES DE EXPERIENCIA GALERÍA DE EXPERIENCIA -------------------->
 <!------------------------ GALERÍA TALLERES DE EXPERIENCIA GALERÍA DE EXPERIENCIA -------------------->
 <!------------------------ GALERÍA TALLERES DE EXPERIENCIA GALERÍA DE EXPERIENCIA -------------------->
@@ -1210,12 +1306,12 @@ Quiero iniciar mi proceso
         </div>
         <div class="timeline-content">
             <h3>El Espectador - Revolucionando la Educación en Colombia</h3>
-            <p>Creador de una revolución educativa que inspira.</p>
+            <p>Andrés Manrique León es COFUNDADOR de una iniciativa que impulsa una verdadera revolución educativa en Colombia. A través de Aspirantes, un proyecto nacido entre jóvenes que soñaban con ingresar a la universidad sin contar con recursos para preparatorios privados, hoy se abren caminos para estudiantes de estratos 1, 2 y 3 que desean acceder a la educación superior.</p>
             <a href="https://www.elespectador.com/especiales/titanes-caracol-2024-creador-de-una-revolucion-educativa-que-inspira" target="_blank">Ver cobertura</a>
         </div>
     </div>
 </div>
-
+G
 <div class="timeline-item">
     <span class="year">2024</span>
     <div class="timeline-card">
@@ -1224,7 +1320,8 @@ Quiero iniciar mi proceso
         </div>
         <div class="timeline-content">
             <h3>Noticias Caracol - Ganador Titanes Caracol - Educación de Calidad</h3>
-            <p>Titanes Caracol 2024: Colombia eligió.</p>
+            <p>En la categoría de Educación de Calidad y Desarrollo de Capacidades, el galardón fue otorgado a Andrés Manrique León. Aspirantes, busca revolucionar la educación en Colombia al unir sueños, metas y talentos. Andrés apoya en la organización de grupos de estudio y otros procesos educativos para fortalecer los conocimientos de los jóvenes, brindándoles el apoyo necesario para acceder a universidades e instituciones de formación superior.
+</p>
             <a href="https://www.noticiascaracol.com/colombia/titanes-caracol-2024-colombia-eligio-a-las-mejores-historias-que-contribuyen-al-pais-so35" target="_blank">Ver cobertura</a>
         </div>
     </div>
@@ -1269,7 +1366,7 @@ Quiero iniciar mi proceso
         </div>
         <div class="timeline-content">
             <h3>APC Colombia - Intervención Cumbre Mundial de Premios Nobel</h3>
-            <p>Generación Paz – Educación y liderazgo juvenil.</p>
+            <p>Andrés es psicólogo y líder educativo comprometido con la transformación social a través de la educación. Como fundador de la Fundación Aspirantes.org, ha impulsado iniciativas que fortalecen las capacidades psicosociales, afectivas y cognitivas de jóvenes colombianos, ampliando oportunidades de acceso a la educación superior. Su trabajo ha sido reconocido en programas internacionales de liderazgo y desarrollo, donde ha representado iniciativas de impacto que promueven el talento, la equidad y la construcción de futuro en nuevas generaciones.</p>
             <a href="https://apccolombia.gov.co/node/1025" target="_blank">Ver cobertura</a>
         </div>
     </div>
@@ -1332,7 +1429,7 @@ superior en Colombia. Se parte de una visión amplia, y contextualizada de las..
         </div>
         <div class="timeline-content">
             <h3>PCNPOST - Hablamos de Orientacion Vocacional en Jovenes</h3>
-            <p>Educación en orientación vocacional: potencialidades y herramientas.</p>
+            <p>La orientación vocacional es una herramienta clave para ayudar a los jóvenes a descubrir sus talentos, intereses y posibilidades profesionales. A través de pruebas psicológicas, procesos de reflexión y acompañamiento especializado, es posible comprender mejor el perfil vocacional de cada estudiante y orientar decisiones educativas más conscientes. La vocación no solo se relaciona con habilidades, sino también con valores, motivaciones profundas y el contexto cultural que influye en la construcción del proyecto de vida.</p>
             <a href="https://pcnpost.com/andres-manrique-educacion-en-orientacion-vocacional-potencialidades-y-herramientas/" target="_blank">Ver cobertura</a>
         </div>
     </div>
@@ -1374,7 +1471,7 @@ superior en Colombia. Se parte de una visión amplia, y contextualizada de las..
     <a href="https://caracol.com.co/2024/12/26/aspirantes-una-iniciativa-de-andres-manrique-que-impulsa-a-los-jovenes-a-entrar-en-la-universidad/" target="_blank" class="carousel-card">
      
   <div class="carousel-logo">
-        <img src="img/foto3.jpg" alt="Noticias Caracol">
+        <img src="img/linea2.jpg" alt="Noticias Caracol">
     </div>
 
    <h4>Caracol Radio</h4>
@@ -1384,7 +1481,7 @@ superior en Colombia. Se parte de una visión amplia, y contextualizada de las..
     <a href="https://elpais.com/america-colombia/branded/los-lideres-de-colombia/2024-12-05/andres-manrique-el-lider-de-una-red-de-pilos-que-comparte-gratuitamente-las-claves-para-pasar-a-la-u.html" target="_blank" class="carousel-card">
        
   <div class="carousel-logo">
-        <img src="img/foto3.jpg" alt="Noticias Caracol">
+        <img src="img/linea1.jpg" alt="Noticias Caracol">
     </div>
 
  <h4>El País</h4>
@@ -1872,41 +1969,62 @@ nav.classList.toggle("active");
 </script>
 
 
+
 <script>
 
-const counters = document.querySelectorAll(".contador");
+const counters = document.querySelectorAll('.counter');
 
-counters.forEach(counter => {
+const startCounter = (counter) => {
 
-counter.innerText = "0";
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
 
-const updateCounter = () => {
+    const speed = target / 120;
 
-const target = +counter.getAttribute("data-target");
+    const update = () => {
 
-const count = +counter.innerText;
+        count += speed;
 
-const increment = target / 100;
+        if(count < target){
 
-if(count < target){
+            counter.innerText = Math.floor(count);
+            requestAnimationFrame(update);
 
-counter.innerText = Math.ceil(count + increment);
+        }else{
 
-setTimeout(updateCounter,20);
+            counter.innerText = target;
 
-}else{
+        }
 
-counter.innerText = target;
+    };
 
-}
-
+    update();
 };
 
-updateCounter();
 
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            const counter = entry.target;
+            startCounter(counter);
+            observer.unobserve(counter);
+
+        }
+
+    });
+
+},{threshold:0.6});
+
+
+counters.forEach(counter => {
+    observer.observe(counter);
 });
 
 </script>
+
 
 
 </body>
