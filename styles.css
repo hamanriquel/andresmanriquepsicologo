@@ -33,7 +33,7 @@
 .hero-subtitle {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #e2e8f0;
+    color: #f8fafc;
 }
 
 .hero-location {
@@ -157,7 +157,7 @@ padding-left:20px;
     }
 
     .hero-subtitle {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .hero {
@@ -273,113 +273,273 @@ header {
     color: white;
 }
 
+/* SECCION SOBRE MI */
 
-/* SOBRE MI */
-.sobre-mi {
-    background: var(--light);
-    padding: 80px 20px;
+.sobre-mi{
+padding:80px 20px;
+background:#f8fafc;
 }
 
-.bio-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-    margin-top: 40px;
+.titulo-seccion{
+text-align:center;
+font-size:32px;
+margin-bottom:50px;
 }
 
-.bio-text p {
-    margin-bottom: 18px;
-    line-height: 1.65;
-    font-size: 1.05rem;
+/* GRID */
+
+.bio-grid{
+display:grid;
+grid-template-columns:1fr 1.2fr;
+gap:50px;
+align-items:center;
 }
 
-.bio-text h3 {
-    margin-top: 28px;
-    color: var(--wood);
-    font-size: 1.3rem;
+/* FOTO */
+
+.bio-image img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-.logros-list, .formacion-list {
-    margin-top: 12px;
-    list-style: none;
-    padding-left: 0;
+/* TEXTO */
+
+.bio-text p{
+margin-bottom:15px;
+line-height:1.6;
+color:#334155;
 }
 
-.logros-list li,
-.formacion-list li {
-    margin-bottom: 10px;
-    font-weight: 500;
+/* BURBUJAS */
+
+.burbujas{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin:20px 0;
 }
 
-.bio-image img {
-    width: 100%;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.08);
+.burbuja{
+position:relative;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#e2e8f0;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+cursor:pointer;
+transition:all 0.3s ease;
+}
+
+.burbuja:hover{
+transform:scale(1.15);
+background:#cbd5e1;
+}
+
+/* TEXTO HOVER */
+
+.burbuja p{
+position:absolute;
+bottom:-70px;
+left:50%;
+transform:translateX(-50%);
+background:white;
+padding:8px 12px;
+border-radius:10px;
+font-size:13px;
+width:180px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+opacity:0;
+pointer-events:none;
+transition:0.3s;
+}
+
+.burbuja:hover p{
+opacity:1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.bio-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.bio-image{
+max-width:350px;
+margin:auto;
+}
+
+.burbujas{
+justify-content:center;
+}
+
 }
 
 
 
+/* SECCION IMPACTO */
 
-
-
-.valores-section {
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #f5f5f5, #eaeaea);
-    text-align: center;
+.impacto{
+padding:80px 20px;
+background:#f1f5f9;
 }
 
-.valores-title {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 20px;
 }
 
-.valores-subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 60px;
-    color: #555;
+/* TITULO */
+
+.impacto-titulo{
+text-align:center;
+margin-bottom:40px;
+font-size:32px;
 }
 
-.valores-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
-    margin: auto;
+/* GRID */
+
+.impacto-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+gap:30px;
 }
 
-.valor-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-    transition: all 0.4s ease;
+/* TARJETAS */
+
+.impacto-item{
+background:white;
+padding:35px 20px;
+border-radius:15px;
+box-shadow:0 8px 25px rgba(0,0,0,0.07);
+text-align:center;
+transition:0.3s;
 }
 
-.valor-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+.impacto-item:hover{
+transform:translateY(-6px);
 }
 
-.valor-icon {
-    font-size: 2rem;
-    margin-bottom: 15px;
+/* NUMERO */
+
+.contador{
+font-size:42px;
+color:#1e293b;
+margin-bottom:10px;
 }
 
-.valor-card h3 {
-    margin-bottom: 15px;
-    font-size: 1.4rem;
+/* TEXTO */
+
+.impacto-item p{
+color:#64748b;
+font-size:16px;
 }
 
-.valor-card p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #444;
+
+
+.valores-section{
+padding:80px 20px;
+background:#f8fafc;
+text-align:center;
 }
 
+.valores-container{
+max-width:1100px;
+margin:auto;
+}
+
+.valores-title{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.valores-subtitle{
+color:#64748b;
+margin-bottom:50px;
+}
+
+/* GRID */
+
+.valores-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+/* FLIP CARD */
+
+.flip-card{
+perspective:1000px;
+height:200px;
+}
+
+.flip-inner{
+position:relative;
+width:100%;
+height:100%;
+transition:transform 0.6s;
+transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-inner{
+transform:rotateY(180deg);
+}
+
+/* CARAS */
+
+.flip-front,
+.flip-back{
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
+border-radius:15px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FRONT */
+
+.flip-front{
+background:white;
+}
+
+.valor-icon{
+font-size:36px;
+margin-bottom:10px;
+}
+
+/* BACK */
+
+.flip-back{
+background:#e2e8f0;
+transform:rotateY(180deg);
+font-size:14px;
+line-height:1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.flip-card{
+height:180px;
+}
+
+}
 
 
 
@@ -397,7 +557,7 @@ header {
 
 
 
-..faq-section {
+.faq-section {
     max-width: 800px;
     margin: auto;
     text-align: left;
@@ -435,6 +595,297 @@ header {
     padding: 20px;
 }
 
+.terapia-section{
+padding:90px 20px;
+background:white;
+text-align:center;
+}
+
+/* HERO */
+
+.terapia-hero{
+max-width:700px;
+margin:auto;
+margin-bottom:60px;
+}
+
+.terapia-hero h2{
+font-size:34px;
+margin-bottom:15px;
+}
+
+.hero-subtitle{
+color:#64748b;
+line-height:1.6;
+}
+
+/* GRID */
+
+.terapia-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* FLIP CARD */
+
+.flip-card{
+perspective:1000px;
+height:200px;
+}
+
+.flip-inner{
+position:relative;
+width:100%;
+height:100%;
+transition:transform 0.6s;
+transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-inner{
+transform:rotateY(180deg);
+}
+
+/* CARAS */
+
+.flip-front,
+.flip-back{
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
+border-radius:15px;
+padding:25px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FRONT */
+
+.flip-front{
+background:#f1f5f9;
+}
+
+.card-icon{
+font-size:36px;
+margin-bottom:10px;
+}
+
+/* BACK */
+
+.flip-back{
+background:#e2e8f0;
+transform:rotateY(180deg);
+font-size:14px;
+line-height:1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.flip-card{
+height:180px;
+}
+
+}
+
+.terapia-section{
+padding:90px 20px;
+background:white;
+text-align:center;
+}
+
+/* HERO */
+
+.terapia-hero{
+max-width:700px;
+margin:auto;
+margin-bottom:60px;
+}
+
+.terapia-hero h2{
+font-size:34px;
+margin-bottom:15px;
+}
+
+.hero-subtitle{
+color:#64748b;
+line-height:1.6;
+}
+
+/* GRID */
+
+.terapia-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* FLIP CARD */
+
+.flip-card{
+perspective:1000px;
+height:200px;
+}
+
+.flip-inner{
+position:relative;
+width:100%;
+height:100%;
+transition:transform 0.6s;
+transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-inner{
+transform:rotateY(180deg);
+}
+
+/* CARAS */
+
+.flip-front,
+.flip-back{
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
+border-radius:15px;
+padding:25px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FRONT */
+
+.flip-front{
+background:#f1f5f9;
+}
+
+.card-icon{
+font-size:36px;
+margin-bottom:10px;
+}
+
+/* BACK */
+
+.flip-back{
+background:#e2e8f0;
+transform:rotateY(180deg);
+font-size:14px;
+line-height:1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.flip-card{
+height:180px;
+}
+
+}
+
+
+
+
+.inversion-section{
+background:#0f172a;
+color:white;
+padding:80px 20px;
+}
+
+.inversion-container{
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+.inversion-title{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.inversion-subtitle{
+opacity:.8;
+margin-bottom:50px;
+}
+
+.inversion-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-bottom:40px;
+}
+
+.precio-card{
+background:#1e293b;
+padding:35px;
+border-radius:20px;
+transition:.3s;
+}
+
+.precio-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.precio-icon{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.precio-number{
+font-size:32px;
+font-weight:700;
+margin:10px 0;
+color:#38bdf8;
+}
+
+.precio-small{
+opacity:.7;
+}
+
+.modelo-social{
+max-width:700px;
+margin:auto;
+margin-top:20px;
+opacity:.9;
+line-height:1.6;
+}
+
+.inversion-cta{
+margin-top:40px;
+}
+
+.btn-iniciar{
+display:inline-block;
+margin-top:15px;
+background:#38bdf8;
+color:#0f172a;
+padding:14px 28px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-iniciar:hover{
+background:white;
+}
+
+
+
+
 
 
 .terapia-section {
@@ -451,7 +902,7 @@ header {
 .hero-subtitle {
     max-width: 650px;
     margin: 0 auto 80px auto;
-    color: #555;
+    color: ##f8fafc;
     font-size: 1.1rem;
 }
 
