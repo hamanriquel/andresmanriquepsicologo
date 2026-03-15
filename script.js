@@ -1,211 +1,189 @@
-// Animación fade-in al hacer scroll
+// =============================
+// ANIMACIONES AL HACER SCROLL
+// =============================
 
-const sections = document.querySelectorAll(".section");
+document.addEventListener("DOMContentLoaded", function(){
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-}, { threshold: 0.1 });
+const elements = document.querySelectorAll("section, .valor-card, .bio-text, .bio-image");
 
-sections.forEach(section => {
-    section.style.opacity = 0;
-    section.style.transform = "translateY(40px)";
-    section.style.transition = "all 0.8s ease";
-    observer.observe(section);
+const observerFade = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+},{threshold:0.15});
 
-    const elements = document.querySelectorAll("section, .valor-card, .bio-text, .bio-image");
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-        });
-    }, { threshold: 0.15 });
-
-    elements.forEach(el => {
-        el.classList.add("hidden");
-        observer.observe(el);
-    });
+elements.forEach(el=>{
+el.classList.add("hidden");
+observerFade.observe(el);
+});
 
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
+// =============================
+// FAQ ACORDEÓN
+// =============================
 
-    const faqItems = document.querySelectorAll(".faq-item");
+document.addEventListener("DOMContentLoaded", function(){
 
-    faqItems.forEach(item => {
-        const question = item.querySelector(".faq-question");
+const faqItems = document.querySelectorAll(".faq-item");
 
-        question.addEventListener("click", () => {
+faqItems.forEach(item=>{
 
-            // Cerrar los demás
-            faqItems.forEach(el => {
-                if (el !== item) {
-                    el.classList.remove("active");
-                }
-            });
+const question = item.querySelector(".faq-question");
 
-            // Activar el actual
-            item.classList.toggle("active");
-        });
-    });
+question.addEventListener("click",()=>{
+
+faqItems.forEach(el=>{
+if(el!==item){
+el.classList.remove("active");
+}
+});
+
+item.classList.toggle("active");
+
+});
+
+});
 
 });
 
 
 
-// GALERÍA MODAL
 
-const modal = document.getElementById("modalGaleria");
-const modalImg = document.getElementById("imgModal");
-const cerrar = document.querySelector(".cerrar");
+// =============================
+// TOOLTIP MAPA
+// =============================
 
-document.querySelectorAll(".galeria-item img").forEach(img => {
-    img.addEventListener("click", function () {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-    });
-});
+document.addEventListener("DOMContentLoaded", function(){
 
-cerrar.addEventListener("click", function () {
-    modal.style.display = "none";
-});
-
-window.addEventListener("click", function (e) {
-    if (e.target == modal) {
-        modal.style.display = "none";
-    }
-});
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const images = document.querySelectorAll(".impacto-item img");
-
-    // Crear modal dinámicamente
-    const modal = document.createElement("div");
-    modal.classList.add("impacto-modal");
-
-    const modalImg = document.createElement("img");
-    modal.appendChild(modalImg);
-
-    document.body.appendChild(modal);
-
-    // Abrir imagen
-    images.forEach(img => {
-        img.addEventListener("click", function () {
-            modalImg.src = this.src;
-            modal.classList.add("active");
-        });
-    });
-
-    // Cerrar modal al hacer clic fuera
-    modal.addEventListener("click", function () {
-        modal.classList.remove("active");
-    });
-
-});
-
-
-<script>
 const puntos = document.querySelectorAll(".punto");
+
+if(puntos.length>0){
+
 const tooltip = document.getElementById("tooltip");
 const tooltipImg = document.getElementById("tooltip-img");
 const tooltipText = document.getElementById("tooltip-text");
 
-puntos.forEach(punto => {
+puntos.forEach(punto=>{
 
-    punto.addEventListener("mouseenter", (e) => {
+punto.addEventListener("mouseenter",(e)=>{
 
-        tooltip.style.display = "block";
-        tooltipImg.src = punto.getAttribute("data-img");
-        tooltipText.textContent = punto.getAttribute("data-text");
+tooltip.style.display="block";
+tooltipImg.src=punto.getAttribute("data-img");
+tooltipText.textContent=punto.getAttribute("data-text");
 
-        tooltip.style.top = (e.pageY - 150) + "px";
-        tooltip.style.left = (e.pageX + 20) + "px";
-    });
-
-    punto.addEventListener("mouseleave", () => {
-        tooltip.style.display = "none";
-    });
+tooltip.style.top=(e.pageY-150)+"px";
+tooltip.style.left=(e.pageX+20)+"px";
 
 });
-</script>
 
-
-<script>
-document.querySelectorAll(".faq-question").forEach(question => {
-  question.addEventListener("click", () => {
-    const item = question.parentElement;
-    item.classList.toggle("active");
-  });
+punto.addEventListener("mouseleave",()=>{
+tooltip.style.display="none";
 });
-</script>
 
-<script>
+});
 
-const counters = document.querySelectorAll('.counter');
+}
 
-const startCounter = (counter) => {
+});
 
-    const target = +counter.getAttribute('data-target');
-    let count = 0;
 
-    const speed = target / 120;
+// =============================
+// CONTADOR DE ESTADÍSTICAS
+// =============================
 
-    const update = () => {
+document.addEventListener("DOMContentLoaded", function(){
 
-        count += speed;
+const counters = document.querySelectorAll(".counter");
 
-        if(count < target){
+const startCounter = (counter)=>{
 
-            counter.innerText = Math.floor(count);
-            requestAnimationFrame(update);
+const target = +counter.getAttribute("data-target");
 
-        }else{
+let count = 0;
 
-            counter.innerText = target;
+const speed = target/120;
 
-        }
+const update = ()=>{
 
-    };
+count+=speed;
 
-    update();
+if(count<target){
+
+counter.innerText=Math.floor(count);
+requestAnimationFrame(update);
+
+}else{
+
+counter.innerText=target;
+
+}
+
 };
 
+update();
 
-const observer = new IntersectionObserver(entries => {
+};
 
-    entries.forEach(entry => {
+const observerCounter = new IntersectionObserver(entries=>{
 
-        if(entry.isIntersecting){
+entries.forEach(entry=>{
 
-            const counter = entry.target;
-            startCounter(counter);
-            observer.unobserve(counter);
+if(entry.isIntersecting){
 
-        }
+const counter = entry.target;
+startCounter(counter);
+observerCounter.unobserve(counter);
 
-    });
+}
+
+});
 
 },{threshold:0.6});
 
-
-counters.forEach(counter => {
-    observer.observe(counter);
+counters.forEach(counter=>{
+observerCounter.observe(counter);
 });
 
-</script>
+});
 
 
+// =============================
+// BOTÓN VOLVER ARRIBA
+// =============================
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const botonArriba = document.getElementById("btnArriba");
+
+if(botonArriba){
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>300){
+botonArriba.style.display="block";
+}else{
+botonArriba.style.display="none";
+}
+
+});
+
+botonArriba.addEventListener("click",function(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
+
+}
+
+});
