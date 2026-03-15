@@ -343,23 +343,27 @@ background:#cbd5e1;
 
 /* TEXTO HOVER */
 
+
 .burbuja p{
 position:absolute;
-bottom:-70px;
-left:50%;
-transform:translateX(-50%);
+top:50%;
+left:80px;
+transform:translateY(-50%);
 background:white;
-padding:8px 12px;
+padding:10px 14px;
 border-radius:10px;
 font-size:13px;
-width:180px;
-text-align:center;
+width:200px;
+text-align:left;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 
 opacity:0;
 pointer-events:none;
 transition:0.3s;
+z-index:20;
 }
+
+
 
 .burbuja:hover p{
 opacity:1;
