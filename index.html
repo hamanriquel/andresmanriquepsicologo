@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Psicólogo en Bogotá especializado en terapia cognitivo-conductual, acompañamiento emocional y desarrollo personal. Modalidad presencial y virtual.">
+<meta name="description" content="Psicologo en Bogota especializado en terapia cognitivo-conductual, acompañamiento emocional y desarrollo personal. Modalidad presencial y virtual.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="png/favicon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="png/favicon.png">
@@ -16,6 +18,8 @@
 
 <body>
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
 
 <header>
 
@@ -85,32 +89,145 @@ CONSULTA INICIAL ¡GRATIS!
 </a>
 
 </header>
-
-
 <!-- HERO -->
+
+
+
 <section id="inicio" class="hero">
-    <div class="hero-overlay"></div>
 
-    <div class="hero-content">
-        <h1>Tu bienestar emocional también es prioridad</h1>
-        
-        <p class="hero-subtitle">
-            Acompañamiento psicológico profesional para ayudarte a recuperar claridad, equilibrio y confianza.
-        </p>
+<div id="particles-hero"></div>
 
-        <p class="hero-location">
-            Atención presencial en Bogotá y modalidad virtual en todo el país.
-        </p>
+<div class="hero-overlay"></div>
 
-        <div class="hero-buttons">
-            <a href="#contacto" class="btn-primary">Agendar Consulta</a>
-            <a href="#individual" class="btn-secondary">Conoce el proceso</a>
-        </div>
-    </div>
+<div class="hero-content">
+
+<h1>Tu bienestar emocional también es prioridad</h1>
+
+<p class="hero-subtitle">
+Acompañamiento psicológico profesional para ayudarte a recuperar claridad, equilibrio y confianza.
+</p>
+
+<p class="hero-location">
+Atención presencial en Bogotá y modalidad virtual en todo el país.
+</p>
+
+<div class="hero-buttons">
+<a href="#contacto" class="btn-primary">Agendar Consulta</a>
+<a href="#individual" class="btn-secondary">Conoce el proceso</a>
+</div>
+
+</div>
+
 </section>
 
+
+<script>
+
+tsParticles.load("particles-hero", {
+
+background:{
+color:"transparent"
+},
+
+fpsLimit:60,
+
+particles:{
+
+number:{
+value:70,
+density:{
+enable:true,
+area:800
+}
+},
+
+color:{
+value:"#ffffff"
+},
+
+shape:{
+type:"circle"
+},
+
+opacity:{
+value:0.5
+},
+
+size:{
+value:{min:1,max:3}
+},
+
+links:{
+enable:true,
+distance:140,
+color:"#ffffff",
+opacity:0.35,
+width:1
+},
+
+move:{
+enable:true,
+speed:0.6,
+direction:"none",
+random:false,
+straight:false,
+outModes:{
+default:"out"
+}
+}
+
+},
+
+interactivity:{
+
+events:{
+onHover:{
+enable:true,
+mode:"grab"
+},
+onClick:{
+enable:true,
+mode:"push"
+}
+},
+
+modes:{
+
+grab:{
+distance:160,
+links:{
+opacity:0.6
+}
+},
+
+push:{
+quantity:3
+}
+
+}
+
+},
+
+detectRetina:true
+
+});
+
+speed:0.3
+distance:170
+opacity:0.25
+
+</script>
+
+
+
 <!-- SOBRE MIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII ------------------------------------------->
+
+<!-- SOBRE MI ---------------------------------------------------->
+
 <section id="sobre-mi" class="section sobre-mi">
+
+<!-- CONSTELACIONES -->
+<div id="particles-sobre"></div>
 
 <div class="container">
 
@@ -121,7 +238,7 @@ CONSULTA INICIAL ¡GRATIS!
 <!-- FOTO -->
 
 <div class="bio-image">
-<img src="img/foto12.jpg" alt="Andrés Manrique - Psicólogo">
+<img src="img/foto12.png" alt="Andrés Manrique - Psicólogo">
 </div>
 
 
@@ -130,9 +247,12 @@ CONSULTA INICIAL ¡GRATIS!
 <div class="bio-text">
 
 <p>
-Soy <strong>Andrés Manrique</strong>, psicólogo con maestría en educación,
-con experiencia acompañando procesos de crecimiento emocional,
-afrontamiento y transformación en jóvenes y adultos.
+Creo profundamente que la salud mental no es un lujo,
+sino una base para construir una vida con sentido.
+
+Soy <strong>Andrés Manrique</strong>, psicólogo y magíster en educación
+de la Universidad Nacional de Colombia, y acompaño
+procesos de crecimiento emocional en jóvenes y adultos.
 </p>
 
 <p>
@@ -140,6 +260,43 @@ Trabajo desde una perspectiva cognitivo-conductual integrativa,
 enfocada en generar herramientas prácticas, avances sostenibles
 y bienestar real.
 </p>
+
+
+<h3>Formación académica</h3>
+
+<div class="burbujas">
+
+<div class="burbuja">
+<span>🎓</span>
+<p>Magister en Educación - Universidad Nacional</p>
+</div>
+
+<div class="burbuja">
+<span>📘</span>
+<p>Psicólogo - Universidad Nacional de Colombia</p>
+</div>
+
+<div class="burbuja">
+<span>📚</span>
+<p>Tecnólogo en Sistematización de Datos - Universidad Distrital</p>
+</div>
+
+<div class="burbuja">
+<span>🏅</span>
+<p>Cofundador Fundación Aspirantes Org</p>
+</div>
+
+<div class="burbuja">
+<span>🌎</span>
+<p>Delegado y embajador para Colombia en eventos nacionales e internacionales</p>
+</div>
+
+<div class="burbuja">
+<span>🌍</span>
+<p>Becario de Fundación Sura, Colfuturo, JGC, Fundación Origen, entre otras</p>
+</div>
+
+</div>
 
 
 <h3>Logros y reconocimientos</h3>
@@ -173,48 +330,6 @@ y bienestar real.
 
 </div>
 
-
-<h3>Formación académica</h3>
-
-<div class="burbujas">
-
-<div class="burbuja">
-<span>🎓</span>
-<p>Maestría en Educación - Universidad Nacional</p>
-</div>
-
-<div class="burbuja">
-<span>📘</span>
-<p>Psicólogo - Universidad Nacional</p>
-</div>
-
-<div class="burbuja">
-<span>📚</span>
-<p>Tecnólogo - Universidad Distrital</p>
-</div>
-
-<div class="burbuja">
-<span>🏅</span>
-<p>Becario Fundación Sura - Beca Nicanor Restrepo</p>
-</div>
-
-<div class="burbuja">
-<span>🌎</span>
-<p>Delegado Nestlé Colombia - Alianza del Pacífico</p>
-</div>
-
-<div class="burbuja">
-<span>🌍</span>
-<p>Embajador One Young World</p>
-</div>
-
-<div class="burbuja">
-<span>🇺🇸</span>
-<p>Fellow YLAI - Embajada de Estados Unidos</p>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -222,6 +337,100 @@ y bienestar real.
 </div>
 
 </section>
+
+
+
+<!-- SCRIPT CONSTELACIÓN SOBRE MI -->
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<script>
+
+tsParticles.load("particles-sobre", {
+
+background:{
+color:"transparent"
+},
+
+fpsLimit:60,
+
+particles:{
+
+number:{
+value:35,
+density:{
+enable:true,
+area:900
+}
+},
+
+color:{
+value:"#1b3a6b"
+},
+
+shape:{
+type:"circle"
+},
+
+opacity:{
+value:0.5
+},
+
+size:{
+value:{min:1,max:2.5}
+},
+
+links:{
+enable:true,
+distance:170,
+color:"#1b3a6b",
+opacity:0.35,
+width:1
+},
+
+move:{
+enable:true,
+speed:0.25,
+direction:"none",
+random:true,
+straight:false,
+outModes:{
+default:"out"
+}
+}
+
+},
+
+interactivity:{
+
+events:{
+onHover:{
+enable:true,
+mode:"grab"
+}
+},
+
+modes:{
+grab:{
+distance:140,
+links:{
+opacity:0.5
+}
+}
+}
+
+},
+
+detectRetina:true
+
+});
+
+</script>
+
+
+
+
+
 <section class="impacto">
 
 <div class="container">
@@ -231,7 +440,7 @@ y bienestar real.
 <div class="impacto-grid">
 
 <div class="impacto-item">
-<h3 class="contador" data-target="2500">0</h3>
+<h3 class="contador" data-target="118">0+</h3>
 <p>Personas acompañadas</p>
 </div>
 
@@ -241,7 +450,7 @@ y bienestar real.
 </div>
 
 <div class="impacto-item">
-<h3 class="contador" data-target="12">0</h3>
+<h3 class="contador" data-target="10">0</h3>
 <p>Años de formación</p>
 </div>
 
@@ -289,6 +498,23 @@ counter.innerText = target;
 updateCounter();
 
 });
+
+
+const burbujas = document.querySelectorAll('.burbuja');
+
+const observerBurbujas = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add("visible");
+}
+
+});
+
+},{threshold:0.2});
+
+burbujas.forEach(b => observerBurbujas.observe(b));
 
 </script>
 
@@ -509,7 +735,7 @@ y formación continua.
                 <div class="flip-back">
                     <p>
                         Las sesiones pueden reprogramarse o cancelarse
-                        con al menos 6 horas de anticipación.
+                        con al menos 7 horas de anticipación.
                     </p>
                 </div>
             </div>
@@ -576,7 +802,7 @@ y formación continua.
                 <div class="precio-icon">💬</div>
                 <h3>Tarifa accesible</h3>
                 <p>
-                    Las sesiones se ajustan según estrato y nivel de SISBEN.
+                    Las sesiones se ajustan según estrato y/o nivel de SISBEN.
                 </p>
                 <div class="precio-number">$50.000 – $140.000</div>
                 <span class="precio-small">por sesión</span>
@@ -657,10 +883,8 @@ En la primera sesión establecemos los acuerdos del proceso, realizamos una valo
                 <p>
 El valor de cada sesión depende del modelo de tarifa solidaria diferencial, con una inversión promedio de $95.000 COP por sesión (50–60 minutos).
 
-En caso de no poder asistir, es importante cancelar o reprogramar con al menos 8 horas de anticipación.
+En caso de no poder asistir, es importante cancelar o reprogramar con al menos 7 horas de anticipación.
 
-Si no se avisa o no se asiste a la sesión sin previo aviso, la sesión se considera realizada y deberá ser cancelada en su totalidad. 
-Esto permite mantener la organización de la agenda y el respeto por el tiempo reservado exclusivamente para tu proceso.
 </p>
             </div>
         </div>
@@ -671,8 +895,23 @@ Esto permite mantener la organización de la agenda y el respeto por el tiempo r
             </button>
             <div class="faq-answer">
                 <p>Las sesiones tienen una duración aproximada de 50 a 60 minutos.</p>
+
+Si no se avisa o no se asiste a la sesión sin previo aviso, la sesión se considera realizada y deberá ser cancelada en su totalidad. 
+Esto permite mantener la organización de la agenda y el respeto por el tiempo reservado exclusivamente para tu proceso.
             </div>
         </div>
+
+
+        <div class="faq-item">
+            <button class="faq-question">
+                ¿Dónde se toman las sesiones presenciales?
+            </button>
+            <div class="faq-answer">
+                <p>Las sesiones presenciales se realizan en la ciudad de Bogotá, en la localidad de Puente Aranda. La ubicación exacta se comparte una vez se agenda la sesión.</p>
+            </div>
+        </div>
+
+
 
 <div class="faq-item">
     <button class="faq-question">
@@ -706,18 +945,29 @@ Esto permite mantener la organización de la agenda y el respeto por el tiempo r
             <div class="faq-answer">
                 <p>
 
-
-Puedes ponerte en contacto a través del número telefónico o el formulario disponible en la sección de contacto. Allí podrás compartir la mayor cantidad de información posible sobre el tipo de taller o conferencia que requieres, la población participante, duración estimada y objetivos específicos.
+Puedes ponerte en contacto a través del formulario disponible en la sección de contacto. Allí podrás compartir la mayor cantidad de información posible sobre el tipo de taller o conferencia que requieres, la población participante, duración estimada y objetivos específicos.
 
 Con base en esa información, diseñaremos una propuesta ajustada a las necesidades de tu institución y te enviaremos una cotización formal.
-
-La inversión de los talleres varía según duración, número de participantes y nivel de personalización, con valores que suelen iniciar desde $300.000 COP a  $1.400.000 .
-
-Estaré encantado de acompañar procesos formativos que generen impacto real en tu comunidad.
-
 </p>
             </div>
         </div>
+
+
+ <div class="faq-item">
+            <button class="faq-question">
+               ¿Cuál es el valor de un taller, curso de preparación o charla para mi Organización?
+            </button>
+            <div class="faq-answer">
+                <p>
+
+La inversión de los talleres o espacios varía según duración, número de participantes y nivel de personalización, con valores que suelen iniciar desde $300.000 COP a  $1.400.000 .
+
+Estaré encantado de acompañar procesos formativos que generen impacto real en tu comunidad.
+</p>
+            </div>
+        </div>
+
+
 
  <div class="faq-item">
             <button class="faq-question">
@@ -738,8 +988,6 @@ Estaré encantado de acompañar procesos formativos que generen impacto real en 
 <!--  Apartado de TESTIMONIO -->
 <!--  Apartado de TESTIMONIO -->
 <!--  Apartado de TESTIMONIO -->
-
-
 
 <section id="testimonios" class="testimonios-section">
 
@@ -818,7 +1066,7 @@ encontré <span class="resaltado">dirección</span> y
 <span class="resaltado">confianza</span> para tomar decisiones importantes.”
 </p>
 
-<span>— J., 22 años</span>
+<span>— J., 17 años</span>
 
 </div>
 
@@ -843,7 +1091,7 @@ encontré <span class="resaltado">dirección</span> y
 <span class="resaltado">confianza</span> para tomar decisiones importantes.”
 </p>
 
-<span>— J., 22 años</span>
+<span>— J., 20 años</span>
 
 </div>
 
@@ -1005,7 +1253,7 @@ Quiero iniciar mi proceso
 <div class="talleres-hero">
 <h2>Procesos Formativos de Alto Impacto</h2>
 <p>
-Más de 8 años acompañando instituciones educativas,
+Más de 10 años acompañando instituciones educativas,
 fundaciones y organizaciones en procesos de orientación,
 preparación académica y desarrollo socioemocional.
 </p>
@@ -1014,12 +1262,12 @@ preparación académica y desarrollo socioemocional.
 <div class="stats-section">
 
 <div class="stat">
-<h3><span class="counter" data-target="8">0</span>+</h3>
+<h3><span class="counter" data-target="10">0</span>+</h3>
 <p>Años de experiencia</p>
 </div>
 
 <div class="stat">
-<h3><span class="counter" data-target="2600">0</span>+</h3>
+<h3><span class="counter" data-target="3600">0</span>+</h3>
 <p>Estudiantes impactados</p>
 </div>
 
@@ -1033,7 +1281,7 @@ preparación académica y desarrollo socioemocional.
 <div class="programas-grid">
 
 <div class="programa-card">
-<h3>Orientación Vocacional Estratégica</h3>
+<h3>Orientación Socio-Ocupacional Estratégica</h3>
 
 <p class="texto-corto">
 Taller experiencial diseñado para acompañar a los estudiantes en la toma de decisiones académicas y profesionales...
@@ -1548,7 +1796,7 @@ superior en Colombia. Se parte de una visión amplia, y contextualizada de las..
         </div>
         <div class="timeline-content">
             <h3>Nota de Prensa Emprendimientos Sociales - La Silla Vacía</h3>
-            <p>El valioso aporte de los emprendimientos sociales en educación a la construcción de la paz.</p>
+            <p>En Colombia, miles de jóvenes ven truncado su sueño de entrar a la universidad por falta de recursos u oportunidades. Pero algunas historias demuestran que el cambio también nace desde la iniciativa de los propios jóvenes. Esta es la historia de Aspirantes, un emprendimiento social ...</p>
             <a href="https://www.lasillavacia.com/red-de-expertos/red-de-la-educacion/el-valioso-aporte-de-los-emprendimientos-sociales-en-educacion-a-la-construccion-de-la-paz/" target="_blank">Ver cobertura</a>
         </div>
     </div>
@@ -1980,110 +2228,182 @@ modal.classList.remove("active");
 
     <div class="reconocimientos-header">
         <h2>Reconocimientos</h2>
-        <p>Becas, premios y distinciones que respaldan mi trayectoria profesional.</p>
+        <p>Becas, participaciones, premios y distinciones que respaldan mi trayectoria profesional.</p>
     </div>
 
     <div class="reconocimientos-grid">
       
         <div class="reconocimiento-item">
-            <img src="img/prem/beca_origen1.jpg" alt="Beca Fundación Origen">
+            <img src="prem/prem_ylai.jpg" alt="Beca Fundación Origen">
             <p class="reconocimiento-texto">
-                Beca Educación – Fundación Origen (2015)
+               (2026)
+               Delegado / Fellow – Young Leaders America Initiative - Programa de la Embajada de EE.UU. en Colombia.
             </p>
         </div>
 
         <div class="reconocimiento-item">
-            <img src="img/prem/beca_Sura.jpg" alt="Nombre Premio 1">
+            <img src="prem/premio_lideres.jpg" alt="Nombre Premio 1">
  <p class="reconocimiento-texto">
-                Beca Nicanor Restrepo SantaMaria (2015)
+(2024)
+Reconocimiento como Uno de los 100 Nuevos Líderes en Colombia
             </p>
         </div>
 
         <div class="reconocimiento-item">
-            <img src="img/prem/Becario Semillero_Jovenes.jpg" alt="Nombre Beca 2">
+            <img src="prem/Liderazgo_origen 2023.jpg" alt="Nombre Beca 2">
  <p class="reconocimiento-texto">
-                Beca Programa Jovenes Talento Colfuturo (2015)
+(2023-2024)
+Ganador de la Beca Parcial para el Programa 2.0 del Curso Liderazgo transformador - Fundacion Origen.
             </p>
         </div>
 
         <div class="reconocimiento-item">
-            <img src="img/prem/greenday1.jpg" alt="Nombre Beca 2">
+            <img src="prem/Premio_juan.jpg" alt="Nombre Beca 2">
  <p class="reconocimiento-texto">
-                Premio Baqueta de GreenDay (2015)
+(2020)          
+Beca Juan Pablo Gutiérrez Cáceres - Apoyo Matrícula Maestría en Educación Universidad Nacional -Bogotá.
+  </p>
+        </div>
+
+        <div class="reconocimiento-item">
+            <img src="prem/premio_Alianza.jpg" alt="Nombre Beca 2">
+ <p class="reconocimiento-texto">
+(2019)
+Embajador IV Cumbre de Jóvenes de la Alianza del Pacífico – Nestlé
             </p>
         </div>
 
         <div class="reconocimiento-item">
-            <img src="img/prem/Liderazgo_origen 2023.jpg" alt="Nombre Beca 2">
+            <img src="prem/premio_Sura.jpg" alt="Nombre Beca 2">
  <p class="reconocimiento-texto">
-                Beca Educación – Fundación Origen (2015)
-            </p>
-        </div>
-
-        <div class="reconocimiento-item">
-            <img src="img/prem/premio_Alianza.jpg" alt="Nombre Premio 3">
- <p class="reconocimiento-texto">
-                Delegación Alianza del Pacifico Colombia - Mexico
-            </p>
-        </div>
-
-
-        <div class="reconocimiento-item">
-            <img src="img/prem/premio_Colfutu.jpg" alt="Nombre Premio 3">
- <p class="reconocimiento-texto">
-                Programa Jovenes Talento Colfuturo
-            </p>
-        </div>
-
-
-        <div class="reconocimiento-item">
-            <img src="img/prem/premio_foro_Educativo.jpg" alt="Nombre Premio 3">
- <p class="reconocimiento-texto">
-                Beca Educación – Fundación Origen (2015)
+(2019)
+Ganador de la Beca Nicanor Restrepo Santamaría – Fundación Sura - Matricula y Sostenimiento Posgrado.
             </p>
         </div>
 
 
         <div class="reconocimiento-item">
-            <img src="img/prem/Premio_juan.jpg" alt="Nombre Premio 3">
+            <img src="prem/premio_foro_Educativo.jpg" alt="Nombre Premio 3">
  <p class="reconocimiento-texto">
-                Beca Juan Paglo Gutierrez
+(2019)
+Panelista Foro Educativo Nacional - Bicentenario
+            </p>
+        </div>
+
+  <div class="reconocimiento-item">
+            <img src="prem/mauricio.jpg" alt="Nombre Premio 3">
+ <p class="reconocimiento-texto">
+(2019) Beneficiario del Programa de Mentorias de la Fundación Origen - Mentor: Mauricio Sanz de Santamaria
+
+            </p>
+        </div>
+
+
+        <div class="reconocimiento-item">
+            <img src="prem/premio_Colfutu.jpg" alt="Nombre Premio 3">
+ <p class="reconocimiento-texto">
+(2018)
+Becario del Semillero Programa de Jóvenes Talento – Colfuturo - Ganador Beca Curso Ingles.
+            </p>
+        </div>
+
+
+        <div class="reconocimiento-item">
+            <img src="prem/virtualEduca.jpg" alt="Nombre Premio 3">
+ <p class="reconocimiento-texto">
+(2018)
+Reconocimiento Ponencia Virtual Educa Argentina.
+            </p>
+        </div>
+
+
+        <div class="reconocimiento-item">
+            <img src="prem/Cumbre1.jpg" alt="Nombre Premio 3">
+ <p class="reconocimiento-texto">
+(2017)
+Panelista – Cumbre Mundial de Premios Nobel de Paz. Intervención Agencia de Cooperación Internacional Colombiana.
+
             </p>
         </div>
 
 
    <div class="reconocimiento-item">
-            <img src="img/prem/premio_lideres.jpg" alt="Nombre Premio 3">
+            <img src="prem/premioOYWNestle.jpg" alt="Nombre Premio 3">
  <p class="reconocimiento-texto">
-                Beca Educación – Fundación Origen (2015)
+(2017)
+Embajador OYW (One Young World) – Cumbre de Jóvenes Líderes más importante del mundo
+
             </p>
         </div>
 
 
    <div class="reconocimiento-item">
-            <img src="img/prem/premio_Sura.jpg" alt="Nombre Premio 3">
+            <img src="prem/prosperity.jpg" alt="Nombre Premio 3">
  <p class="reconocimiento-texto">
-                Beca Educación – Fundacion Sura
-            </p>
-        </div>
-
-
-   <div class="reconocimiento-item">
-            <img src="img/prem/premio_titanes.jpg" alt="Nombre Premio 3">
- <p class="reconocimiento-texto">
-                Ganador Titanes Caracol
+(2017)
+Agente de Prosperidad – Fundación Hearth For Change - Delegado por APC Colombia para representar a Colombia en Santiago de Chile,
             </p>
         </div>
 
 
         <div class="reconocimiento-item">
-            <img src="img/prem/premioOYWNestle.jpg" alt="Nombre Premio 3">
+            <img src="prem/Dps.jpg" alt="Nombre Premio 3">
  <p class="reconocimiento-texto">
-                Beca Educación – Fundación Origen (2015)
-            </p>
+(2016)
+Beneficiario del programa Jóvenes en Acción, una iniciativa del Departamento Administrativo para la Prosperidad Social.</p>
+        </div>
+
+
+     <div class="reconocimiento-item">
+            <img src="prem/liderBogota.jpg" alt="Nombre Premio 3">
+ <p class="reconocimiento-texto">
+(2016) Participante y Ganador del Proceso Formativo Bogotá Lider - IDPAC
+ </p>
+        </div>
+
+         <div class="reconocimiento-item">
+            <img src="prem/bretano.jpeg" alt="Nombre Premio 3">
+ <p class="reconocimiento-texto">
+    (2016)
+Becario de la Fundación Educativa Bretano - Acompañamiento y Programa de Sostenimiento
+ </p>
+        </div>
+
+
+ <div class="reconocimiento-item">
+            <img src="prem/Juventic.jpg" alt="Nombre Premio 3">
+ <p class="reconocimiento-texto">
+    (2015) Realización del Diplomado en Competencias TIC del Google Colombia & Colnodo.
+
+ </p>
+        </div>
+
+  
+ <div class="reconocimiento-item">
+            <img src="prem/beca_origen1.jpg" alt="Nombre Premio 3">
+ <p class="reconocimiento-texto">
+    (2015) Ganador de la Beca Educación Fundación Origen - Formación en Liderazgo
+ </p>
+        </div>
+
+    
+    <div class="reconocimiento-item">
+            <img src="prem/Mentorias.jpg" alt="Nombre Premio 3">
+ <p class="reconocimiento-texto">
+    (2014) Beneficiario Programa de Mentorías Mentors 4 U Colombia - Sara Uribe
+ </p>
+        </div>
+
+         <div class="reconocimiento-item">
+            <img src="prem/Taller.jpg" alt="Nombre Premio 3">
+ <p class="reconocimiento-texto">
+    (2014) 
+    Participantes del Taller de Creatividad e Innovación Científica - Universidad Nacional de Colombia.
+ </p>
         </div>
 
     </div>
+
 
 </section>
 
@@ -2098,66 +2418,131 @@ modal.classList.remove("active");
     <div class="mapa-container">
 
         <!-- MAPA SVG (puedes reemplazar por uno más detallado luego) -->
-        <img src="img/Mapa.png" class="mapa-base">
+        <img src="map/Mapa.png" class="mapa-base">
 
-        <!-- PUNTOS INTERACTIVOS -->
+    
     
     <div class="punto" 
-             style="top:15%; left:45%;" 
-             data-img="img/map/med.jpg"
-             data-text="Cali – Talleres juveniles y liderazgo.">
+style="top:18%; left:45%;"
+             data-img="map/Apoyo Grupos Focales_Valledupar2022.jpg"
+             data-text="CESAR, VALLEDUPAR / Apoyo en Grupos Focales - Programas de Ayuda Humanitaria// CHARLA UNIVERSITARIA">
         </div>
 
 
     <div class="punto" 
-             style="top:20%; left:45%;" 
-             data-img="img/map/med.jpg"
-             data-text="Cali – Talleres juveniles y liderazgo.">
+             data-img="map/barranquilla_2022Acesco.jpg"
+style="top:16%; left:37%;"
+             data-text="BARRANQUILLA, MALAMBO/ PreIcfes - Orientacion OSO - Fundacion Acesco 2022">
         </div>
 
         <div class="punto" 
-             style="top:30%; left:45%;" 
-              data-img="img/map/med.jpg"
-             data-text="Popayán (Cauca) – Procesos educativos.">
+style="top:13%; left:50%;"
+             data-img="map/Rioacha_Maicao_2022.jpg"
+             data-text="RIOHACHA, MAICAO – Fortalecimiento Fundacion NNA 2022.">
         </div>
 
         <div class="punto" 
-             style="top:40%; left:45%;" 
-              data-img="img/map/med.jpg"
-             data-text="Medellín – Formación en proyecto de vida.">
+style="top:32%; left:30%;"
+             data-img="map/regnumCristhi.jpg"
+             data-text="ANTIOQUIA, RIONEGRO / Convencion Jovenes Regnum Cristi Colombia 2017">
         </div>
 
-        <div class="punto" 
-             style="top:48%; left:45%;" 
-               data-img="img/map/med.jpg"
-             data-text="Bogotá – Conferencias y mentorías.">
-        </div>
 
-        <div class="punto" 
-             style="top:55%; left:45%;" 
-                data-img="img/map/med.jpg"
-             data-text="Riohacha – Juventud y oportunidades educativas.">
-        </div>
-
-        <div class="punto" 
-             style="top:60%; left:45%;" 
-                data-img="img/map/med.jpg"
-             data-text="Riohacha – Juventud y oportunidades educativas.">
-        </div>
 
 
         <div class="punto" 
-             style="top:70%; left:45%;" 
-                data-img="img/map/med.jpg"
-             data-text="Riohacha – Juventud y oportunidades educativas.">
+style="top:33%; left:36%;"
+             data-img="map/med.jpg"
+             data-text="ANTIOQUIA, MEDELLIN">
+        </div>
+
+
+
+        <div class="punto" 
+style="top:45%; left:20%;"
+             data-img="map/Cali_Evento 2019.jpg"
+             data-text="CALI – 2019 Lanzamiento Jovenes a la E">
+        </div>
+
+ <div class="punto" 
+style="top:38%; left:38%;"
+             data-img="map/Victoria_Caldas2021.jpg"
+             data-text="CALDAS, MANIZALES – Taller Habilidades XXI">
+        </div>
+
+
+
+        <div class="punto" 
+style="top:42%; left:45%;"
+             data-img="map/U_ExternadoCharla.jpg"
+             data-text="BOG – U. EXTERNADO/ U. JAVERIANA/ U. ANDES / FUCS">
         </div>
 
 
         <div class="punto" 
-             style="top:75%; left:45%;" 
-                data-img="img/map/med.jpg"
-             data-text="Riohacha – Juventud y oportunidades educativas.">
+style="top:47%; left:47%;"
+             data-img="map/Bogota_aspirantes.jpg"
+             data-text="SOACHA – Juventud y oportunidades educativas.">
         </div>
+
+
+
+
+  <div class="punto" 
+style="top:43%; left:40%;"
+             data-img="map/FundacionCountryCLubBBT.jpg"
+             data-text="BOG  – F. COUNTRY CLUB PREICFES">
+        </div>
+
+
+  <div class="punto" 
+style="top:45%; left:45%;"
+             data-img="map/2022AliaznaEducativa.jpg"
+             data-text="BOG - ALIANZA EDUCATIVA – PREICFES 2022 VIRTUAL">
+        </div>
+
+
+        <div class="punto" 
+style="top:55%; left:20%;"
+             data-img="map/Popayan_GruposFocales_2022_AyudaHumanitaria.jpg"
+             data-text="CAUCA, POPAYAN – Grupos Focales Programas de Ayuda Humanitaria">
+        </div>
+
+
+
+
+
+        <div class="punto" 
+style="top:50%; left:83%;"
+             data-img="map/Inspiracion.jpg"
+             data-text="GUIAINIA, INIRIDA  – Preicfes Virtual 60 horas">
+        </div>
+
+
+
+
+        <div class="punto" 
+style="top:44%; left:35%;"
+             data-img="map/Quindio_2019GenE.jpg"
+             data-text="QUÍNDIO, ARMENIA – Charla Lanzamiento MEN">
+        </div>
+
+
+        <div class="punto" 
+style="top:60%; left:32%;"
+             data-img="map/Charla_genE.jpg"
+             data-text="CAQUETÁ, FLORENCIA – Charla Lanzamiento MEN">
+        </div>
+
+   
+
+ <div class="punto" 
+style="top:24%; left:50%;"
+             data-img="map/GruposFocales_Acana2022_Santander.jpg"
+             data-text="CUCUTÁ - Apoyo en Grupos Focales - Programas de Ayuda Humanitaria//">
+        </div>
+
+
 
 
     </div>
@@ -2171,66 +2556,8 @@ modal.classList.remove("active");
 </section>
 
 
-<!-- ================= CONTACTO ================= -->
-<section id="contacto" class="contact-section">
-
-    <div class="contact-container">
-
-        <!-- FORMULARIO GOOGLE (LADO IZQUIERDO) -->
-        <div class="contact-form">
-            <h2>Conectemos</h2>
-            <p>¿Quieres sumar, apoyar o construir juntos?</p>
-
-            <!-- REEMPLAZA EL SRC CON TU GOOGLE FORM -->
-            <iframe 
-                src="https://forms.gle/2tLDj7dLhLLXWo5NA" 
-                width="100%" 
-                height="500" 
-                frameborder="0" 
-                marginheight="0" 
-                marginwidth="0">
-                Cargando…
-            </iframe>
-        </div>
-
-
-
-
-        <!-- INFORMACIÓN DE CONTACTO (LADO DERECHO) -->
-        <div class="contact-info">
-
-            <h2>Hablemos</h2>
-
-            <p class="contact-cta">
-                La salud mental transforma tu vida.  
-                <strong>Construyamos juntos la próxima generación de oportunidades.</strong>
-            </p>
-
-            <div class="contact-details">
-
-                <p><strong>Email:</strong><br>
-                <a href="mailto:tucorreo@email.com">hamanriquel@unal.edu.com</a></p>
-
-                <p><strong>Ubicación:</strong><br>
-                Bogotá, Colombia 🇨🇴</p>
-
-                <div class="contact-social">
-                    <a href="http://instagram.com/unpsicol" target="_blank">Facebook</a>
-                    <a href="http://instagram.com/unpsicol" target="_blank">Instagram</a>
-  <a href="http://instagram.com/unpsicol" target="_blank">Tik Tok</a>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
 <script>
+
 const puntos = document.querySelectorAll(".punto");
 const tooltip = document.getElementById("tooltip");
 const tooltipImg = document.getElementById("tooltip-img");
@@ -2238,21 +2565,182 @@ const tooltipText = document.getElementById("tooltip-text");
 
 puntos.forEach(punto => {
 
-    punto.addEventListener("mouseenter", (e) => {
+punto.addEventListener("mouseenter", function(e){
 
-        tooltip.style.display = "block";
-        tooltipImg.src = punto.getAttribute("data-img");
-        tooltipText.textContent = punto.getAttribute("data-text");
+tooltip.style.display = "block";
 
-        tooltip.style.top = (e.pageY - 150) + "px";
-        tooltip.style.left = (e.pageX + 20) + "px";
-    });
-
-    punto.addEventListener("mouseleave", () => {
-        tooltip.style.display = "none";
-    });
+tooltipImg.src = this.dataset.img;
+tooltipText.innerText = this.dataset.text;
 
 });
+
+punto.addEventListener("mousemove", function(e){
+
+tooltip.style.top = (e.clientY + 20) + "px";
+tooltip.style.left = (e.clientX + 20) + "px";
+
+});
+
+punto.addEventListener("mouseleave", function(){
+
+tooltip.style.display = "none";
+
+});
+
+});
+
+</script>
+
+
+
+<!-- ================= CONTACTO ================= -->
+
+<!-- ================= CONTACTO ================= -->
+
+<section id="contacto" class="contact-section">
+
+<!-- FONDO DE PARTICULAS -->
+<div id="particles-js"></div>
+
+<div class="contact-container">
+
+<!-- FORMULARIO GOOGLE -->
+<div class="contact-form">
+
+<h2>Conectemos</h2>
+<p>¿Quieres sumar, apoyar o construir juntos?</p>
+
+<iframe 
+src="https://forms.gle/2tLDj7dLhLLXWo5NA"
+width="100%"
+height="500"
+frameborder="0"
+marginheight="0"
+marginwidth="0">
+Cargando…
+</iframe>
+
+</div>
+
+
+<!-- INFORMACIÓN DE CONTACTO -->
+<div class="contact-info">
+
+<h2>Hablemos</h2>
+
+<p class="contact-cta">
+La salud mental y la educación transforman vidas.  
+<strong>Construyamos juntos la próxima generación de oportunidades.</strong>
+</p>
+
+<div class="contact-details">
+
+<p>
+<strong>Email:</strong><br>
+<a href="mailto:hamanrique@unal.edu.co">hamanrique@unal.edu.co</a>
+</p>
+
+<p>
+<strong>Ubicación:</strong><br>
+Bogotá, Colombia 🇨🇴
+</p>
+
+<!-- REDES SOCIALES -->
+<div class="contact-social">
+
+<a href="https://www.facebook.com/andrsmanrique" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://instagram.com/unpsicol" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.tiktok.com/@andresmanriquel" target="_blank">
+<i class="fab fa-tiktok"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<script>
+tsParticles.load("particles-js", {
+
+background:{
+color:"transparent"
+},
+
+particles:{
+
+number:{
+value:90
+},
+
+color:{
+value:"#ffffff"
+},
+
+size:{
+value:3
+},
+
+move:{
+enable:true,
+speed:1
+},
+
+links:{
+enable:true,
+distance:150,
+color:"#ffffff",
+opacity:0.4,
+width:1
+}
+
+},
+
+interactivity:{
+
+events:{
+onHover:{
+enable:true,
+mode:"grab"
+},
+onClick:{
+enable:true,
+mode:"push"
+}
+},
+
+modes:{
+
+grab:{
+distance:160,
+links:{
+opacity:0.8
+}
+},
+
+push:{
+quantity:4
+}
+
+}
+
+}
+
+});
+
+
 </script>
 
 
@@ -2277,8 +2765,10 @@ puntos.forEach(punto => {
 
         <div class="footer-contact">
             <h4>Contacto</h4>
-            <p>Email: contacto@tusitio.com</p>
             <p>Atención presencial y virtual</p>
+            <address>
+Bogotá, Colombia
+</address>
         </div>
 
     </div>
@@ -2289,7 +2779,6 @@ puntos.forEach(punto => {
 
 </footer>
 
-<script src="script.js"></script>
 <script>
 document.querySelectorAll(".faq-question").forEach(question => {
   question.addEventListener("click", () => {
@@ -2403,7 +2892,7 @@ behavior:"smooth"
 
 }
 
-});</script>script>
+});</script>
 
 
 </body>
