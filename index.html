@@ -2632,24 +2632,7 @@ Becario de la Fundación Educativa Bretano - Acompañamiento y Programa de Soste
     <p class="subtitulo">Territorios donde he acompañado procesos, talleres y conferencias.</p>
 
 
-    <div class="impacto-mapa">
 
-<div class="impacto-item">
-<h3>15+</h3>
-<p>Territorios</p>
-</div>
-
-<div class="impacto-item">
-<h3>1200+</h3>
-<p>Participantes</p>
-</div>
-
-<div class="impacto-item">
-<h3>30+</h3>
-<p>Talleres</p>
-</div>
-
-</div>
 
     <div class="mapa-container">
 
@@ -2825,43 +2808,64 @@ style="top:24%; left:50%;"
         <p id="tooltip-text"></p>
     </div>
 
+
+
+<div id="mapModal" class="map-modal">
+
+<div class="map-modal-content">
+
+<button class="map-close">&times;</button>
+
+<img id="modal-img" src="">
+<p id="modal-text"></p>
+
+</div>
+
+</div>
+
+
 </section>
+
 
 
 <script>
 
+document.addEventListener("DOMContentLoaded", function(){
+
 const puntos = document.querySelectorAll(".punto");
-const tooltip = document.getElementById("tooltip");
-const tooltipImg = document.getElementById("tooltip-img");
-const tooltipText = document.getElementById("tooltip-text");
+
+const modal = document.getElementById("mapModal");
+const modalImg = document.getElementById("modal-img");
+const modalText = document.getElementById("modal-text");
+const closeBtn = document.querySelector(".map-close");
 
 puntos.forEach(punto => {
 
-punto.addEventListener("mouseenter", function(e){
+punto.addEventListener("click", function(){
 
-tooltip.style.display = "block";
+modal.style.display = "flex";
 
-tooltipImg.src = this.dataset.img;
-tooltipText.innerText = this.dataset.text;
-
-});
-
-punto.addEventListener("mousemove", function(e){
-
-tooltip.style.top = (e.clientY + 20) + "px";
-tooltip.style.left = (e.clientX + 20) + "px";
+modalImg.src = this.dataset.img;
+modalText.innerText = this.dataset.text;
 
 });
 
-punto.addEventListener("mouseleave", function(){
+});
 
-tooltip.style.display = "none";
+closeBtn.addEventListener("click", function(){
+modal.style.display = "none";
+});
 
+modal.addEventListener("click", function(e){
+if(e.target === modal){
+modal.style.display = "none";
+}
 });
 
 });
 
 </script>
+
 
 
 
