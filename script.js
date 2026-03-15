@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 // GALERÍA MODAL
 
 const modal = document.getElementById("modalGaleria");
