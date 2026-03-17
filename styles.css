@@ -2357,12 +2357,12 @@ z-index:2;
     width: 100%;
 }
 
-/* TRACK QUE SE MUEVE */
+/* TRACK QUE SE MUEVE VELOCIDAD DEL MODAL DEL CARRUSEL */
 
 .impacto-track {
     display: flex;
     width: max-content;
-    animation: scrollImpacto 25s linear infinite;
+    animation: scrollImpacto 80s linear infinite;
 }
 
 /* PAUSA AL HOVER */
